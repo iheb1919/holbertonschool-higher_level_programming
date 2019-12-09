@@ -13,7 +13,7 @@ listint_t *list1 = list;
 listint_t *list2 = list;
 if (list == NULL)
 return (0);
-while (liste1 && list2 && list1->next)
+while (list1 && list2 && list1->next)
 {
 list2 = list2->next;
 list1 = list1->next->next;
