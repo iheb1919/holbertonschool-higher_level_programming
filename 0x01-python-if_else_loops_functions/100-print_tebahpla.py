@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 for i in range(122, 96, - 1):
-    if i % 2 != 0:
-        print (chr(i - 32), end="")
+    i = j
+    if j % 2 != 0:
+       j = j - 32
     else:
-        print (chr(i), end="")
+        print (chr(j), end="")
