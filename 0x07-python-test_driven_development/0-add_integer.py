@@ -8,7 +8,7 @@ The 0-add_integer module supplies one function, add_integer(). For example,
 
 
 def add_integer(a, b=98):
-    """ Returns the sum of two int/float parameters. """
+    """ Returns the sum of 2 parameters. """
     if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
     elif type(a) == float:
