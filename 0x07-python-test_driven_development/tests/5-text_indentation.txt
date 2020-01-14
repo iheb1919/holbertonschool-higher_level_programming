@@ -1,0 +1,23 @@
+=============================
+The ``5-text_indentation`` module
+=============================
+
+
+Import module:
+
+   text_indentation() >>>  = __import__('5-text_indentation').text_indentation
+
+
+   >>> text_identation(holberton: school?cohort.10)
+   holberton:
+   
+   
+   school?
+
+   
+   cohort.
+
+
+   10
+
+   

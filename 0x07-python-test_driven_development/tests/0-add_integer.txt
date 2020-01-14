@@ -37,7 +37,7 @@ Import module:
     	      ...
     TypeError: a must be an integer
     
-    >>> add_integer(float('NAN'))
+    >>> add_integer(55,float('nan'))
     Traceback (most recent call last):
     	      ...
     ValueError: cannot convert float NaN to integer
