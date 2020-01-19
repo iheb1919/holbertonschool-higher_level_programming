@@ -4,7 +4,8 @@
 class Rectangle:
     print_symbol = '#'
     number_of_instances = 0
-    def __init__(self, width=0, height=0):        
+
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -32,7 +33,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         return self.__width * self.__height
 
@@ -40,13 +41,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return ((self.__width + self.__height) * 2)
-        
+
     def __str__(self):
         p = ""
         if self.__width == 0 or self.__height == 0:
             return p
         else:
-            p =  str(self.print_symbol) * self.width
+            p = str(self.print_symbol) * self.width
             rect = p
             for i in range(self.height - 1):
                 rect += "\n" + p
@@ -54,7 +55,7 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
-            
+
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
@@ -74,4 +75,4 @@ class Rectangle:
     def square(cls, size=0):
         heightt = size
         widthh = size
-        return Rectangle( widthh, heightt)
+        return Rectangle(widthh, heightt)
