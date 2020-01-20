@@ -46,3 +46,6 @@ Import module:
     Traceback (most recent call last):
     	      ...
     OverflowError: cannot convert float infity to integer
+    
+    >>> add_integer(2.55,5.666)
+    7
