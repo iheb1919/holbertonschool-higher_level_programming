@@ -42,7 +42,7 @@ Import module:
     	      ...
     ValueError: cannot convert float NaN to integer
 
-     >>> add_integer(55,float('inf'))
+    >>> add_integer(55,float('inf'))
     Traceback (most recent call last):
     	      ...
     OverflowError: cannot convert float infity to integer
