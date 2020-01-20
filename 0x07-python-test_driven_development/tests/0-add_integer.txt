@@ -49,3 +49,9 @@ Import module:
     
     >>> add_integer(2.55,5.666)
     7
+
+    >>> add_integer(-2.55,5.666)
+    3
+
+    >>> add_integer(-2.55,-5.666)
+    -7
