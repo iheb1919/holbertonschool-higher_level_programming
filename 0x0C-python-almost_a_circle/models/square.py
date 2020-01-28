@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     """
@@ -22,11 +23,12 @@ class Square(Rectangle):
         """The setter function for the size"""
         self.width = value
         self.height = value
-    
+
     def __str__(self):
         """The overloading __str__ method """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
-        
+        return "[Square] ({}) {}/{} - {}"
+        .format(self.id, self.x, self.y, self.width)
+
     def update(self, *args, **kwargs):
         try:
             self.id = args[0]
@@ -37,8 +39,7 @@ class Square(Rectangle):
             pass
         for key, value in kwargs.items():
             if hasattr(self, key) is True:
-                setattr(self,key,value)
-
+                setattr(self, key, value)
 
     def to_dictionary(self):
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}

@@ -4,7 +4,6 @@
 import json
 
 
-
 class Base:
     """class base"""
     __nb_objects = 0
@@ -29,4 +28,3 @@ class Base:
         with open(cls.__name__ + '.json', 'w', encoding='utf=8') as f:
             if list_objs is None:
                 f.write("[]")
-                
