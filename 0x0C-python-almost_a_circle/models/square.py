@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+square
 """
 
 from models.rectangle import Rectangle
@@ -7,6 +8,12 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """
+    class square
+        Attr:
+           size(getter/setter)
+       Class constructor:
+           def __init__(self, size, x=0, y=0, id=None)
+
     """
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -15,21 +22,22 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """The getter function"""
+        """size getter"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """The setter function for the size"""
+        """size setter"""
         self.width = value
         self.height = value
 
     def __str__(self):
-        """The overloading __str__ method """
+        """__str__ """
         return "[Square] ({}) {}/{} - {}"
         .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
+        """ update """
         try:
             self.id = args[0]
             self.size = args[1]
@@ -42,4 +50,5 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """ to_dictionary"""
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
