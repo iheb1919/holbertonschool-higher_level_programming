@@ -16,11 +16,11 @@ class Base:
 
     def __init__(self, id=None):
         """class base"""
-        if id is None:
+        if id is not None:
+            self.id = id
+        else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-        else:
-            self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -31,6 +31,7 @@ class Base:
             return json.dumps(list_dictionaries)
 
     def save_to_file(cls, list_objs):
+        """ save to jason"""
         with open(cls.__name__ + '.json', 'w', encoding='utf=8') as f:
             if list_objs is None:
                 f.write("[]")
