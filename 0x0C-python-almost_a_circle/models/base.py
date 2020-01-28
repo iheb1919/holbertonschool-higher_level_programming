@@ -1,11 +1,17 @@
-#du!/usr/bin/python3
+#!/usr/bin/python3
 """class base"""
 
 import json
 
 
 class Base:
-    """class base"""
+    """
+    class base
+    Attr:
+           nb_objects (private): number of objects
+       Class constructor:
+           def __init__(self, id=None):
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
