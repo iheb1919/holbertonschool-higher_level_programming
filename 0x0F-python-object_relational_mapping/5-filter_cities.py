@@ -12,7 +12,9 @@ if __name__ == "__main__":
               states ON cities.state_id = states.id where\
               states.name LIKE BINARY '{}'  ORDER BY cities.id ASC"
               .format(argv[4]))
-    for r in c.fetchall():
-        print(r)
+    row = c.fetchall()
+    for r in row:
+        for i in len(row):
+            print(r[i])
     c.close()
     db.close()
