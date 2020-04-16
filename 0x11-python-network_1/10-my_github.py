@@ -9,4 +9,4 @@ if __name__ == "__main__":
                             auth=(sys.argv[1], sys.argv[2]))
         print(reqt.json()["id"])
     except KeyError:
-        print('none')
+        print('None')
