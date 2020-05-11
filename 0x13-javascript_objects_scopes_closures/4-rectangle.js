@@ -22,3 +22,5 @@ class Rectangle {
     this.height = 2 * this.height;
   }
 }
+
+module.exports = Rectangle;
