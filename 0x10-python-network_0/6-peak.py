@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-""" find peak"""
+"""find peak"""
+
+
+def peak_finder(int_list, start, fin):
+    """this usese recurrsion to find peak"""
+    if start == fin:
+        return int_list[start]
+    mid = (fin + start) // 2
+    if int_list[mid] < int_list[mid + 1]:
+        return peak_finder(int_list, mid + 1, fin)
+    return peak_finder(int_list, start, mid)
 
 
 def find_peak(list_of_integers):
-    if len(list_of_integers) == 0:
-        return None
-    if list_of_integers[0] >= list_of_integers[1]:
-        return (list_of_integers[0])
-    else:
-        for i in range(1, len(list_of_integers)):
-            try:
-                if (list_of_integers[i] >= list_of_integers[i - 1] and
-                   list_of_integers[i] >= list_of_integers[i + 1]):
-                    return list_of_integers[i]
-            except:
-                return list_of_integers[len(list_of_integers)]
+    """this function find the peak"""
+    if not list_of_integers:
+        return
+    return peak_finder(list_of_integers, 0, len(list_of_integers) - 1)
