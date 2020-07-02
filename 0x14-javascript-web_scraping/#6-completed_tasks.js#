@@ -9,8 +9,7 @@ request(process.argv[2], function (error, body, response) {
     body = JSON.parse(response);
     let userid = body[0].userId;
     for (let i = 0; i < body.length; i++) {
-      console.log(body[i].userId);
-      if (userid !== body[i].userId || ) {
+      if (userid !== body[i].userId) {
         dict[userid.toString()] = c;
         userid = body[i].userId;
         c = 0;

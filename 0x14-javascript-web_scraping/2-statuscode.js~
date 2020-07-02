@@ -1,3 +1,0 @@
-#!/usr/bin/node
-new XMLHttpRequest().open('GET', process.argv[2]);
-console.log('ok');
