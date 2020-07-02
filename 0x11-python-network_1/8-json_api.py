@@ -1,20 +1,23 @@
 #!/usr/bin/python3
-""" Search API """
-import sys
+"""
+Search API
+"""
 import requests
+import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        q = sys.argv[1]
+    if len(sys.argv) <= 1:
+        q = ""
     else:
-        q = ''
+        q = sys.argv[1]
+
+    status = requests.post('http://0.0.0.0:5000/search_user', data={"q": q})
+
     try:
-        reqt = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
-        req2 = req.json()
-        if not req2:
-            print("No result")
-            exit()
+        if status.json():
+            print("[{}] {}".format(status.json().get("id"),
+                                   status.json().get("name")))
         else:
-            print("[{}] {}".format(req2['id'], req2['name']))
-    except ValueError:
+            print("No result")
+    except:
         print("Not a valid JSON")
